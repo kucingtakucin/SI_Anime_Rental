@@ -1,0 +1,13 @@
+{
+  "name": "si_anime_rental",
+  "version": "1.0.0",
+  "description": "Anime Rental Website",
+  "repository": "git@github.com:AdamArthurF/SI_Anime_Rental.git",
+  "author": "Adam Arthur Faizal <adam.faizal.af6@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
