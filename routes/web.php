@@ -17,11 +17,15 @@ use Laravel\Lumen\Routing\Router;
 
 $router->get('/', [
     'as' => 'home',
-    'uses' => 'Home\HomeController@index'
+    'uses' => 'Home\HomeController@index',
 ]);
 
 $router->get('/product', [
     'as' => 'product',
-    'uses' => 'Product\ProductController@index'
+    'uses' => 'Product\ProductController@index',
 ]);
 
+$router->get('/genres', [
+    'as' => 'genres',
+    'uses' => 'Genres\GenresController@index',
+]);

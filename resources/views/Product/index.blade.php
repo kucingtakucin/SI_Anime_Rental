@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="input-group">
-                <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search anime" aria-label="Search">
+                <input class="form-control mr-sm-2" id="product-search" type="search" placeholder="Search anime" aria-label="Search">
                 <div class="input-group-append">
-                    <button class="btn btn-info my-2 my-sm-0" type="submit" id="search-button">Search</button>
+                    <button class="btn btn-info my-2 my-sm-0" type="submit" id="product-search-button">Search</button>
                 </div>
             </div>
         </div>
