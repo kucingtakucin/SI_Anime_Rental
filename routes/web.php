@@ -29,3 +29,8 @@ $router->get('/genres', [
     'as' => 'genres',
     'uses' => 'Genres\GenresController@index',
 ]);
+
+$router->get('/prosedur', [
+    'as' => 'prosedur',
+    'uses' => 'Prosedur\ProsedurController@index',
+]);
