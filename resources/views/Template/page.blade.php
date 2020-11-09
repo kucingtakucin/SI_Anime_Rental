@@ -31,6 +31,7 @@
                         <a class="nav-link" href="{{ route('product') }}">Product</a>
                         <a class="nav-link" href="{{ route('genres') }}">Genres</a>
                         <a class="nav-link" href="{{ route('prosedur') }}">Prosedur</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </div>
                 </div>
             </div>

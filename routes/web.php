@@ -34,3 +34,8 @@ $router->get('/prosedur', [
     'as' => 'prosedur',
     'uses' => 'Prosedur\ProsedurController@index',
 ]);
+
+$router->get('/contact', [
+    'as' => 'contact',
+    'uses' => 'Contact\ContactController@index',
+]);
