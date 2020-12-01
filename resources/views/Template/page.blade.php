@@ -29,6 +29,7 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
                         <a class="nav-link" href="{{ route('product') }}">Product</a>
+                        <a class="nav-link" href="{{ route('anime.index') }}">Anime</a>
                         <a class="nav-link" href="{{ route('genres') }}">Genres</a>
                         <a class="nav-link" href="{{ route('prosedur') }}">Prosedur</a>
                         <a class="nav-link" href="{{ route('contact') }}">Contact</a>

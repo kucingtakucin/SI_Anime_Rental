@@ -24,10 +24,13 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="animeModal-close">Close</button>
-                </div>
+                <form action="{{ route('anime.store') }}" method="post">
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Pesan</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="animeModal-close">Close</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

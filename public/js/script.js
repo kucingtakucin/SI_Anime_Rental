@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const searchAnime = () => {
         $('#anime-list').html('');
-        fetch(`https://api.jikan.moe/v3/search/anime?q=${$("#search").val()}&genre_exclude=12`)
+        fetch(`https://api.jikan.moe/v3/search/anime?q=${$("#product-search").val()}&genre_exclude=12`)
             .then(response => {
                 if (response.ok) {
                     return response.json();
@@ -19,7 +19,7 @@ $(document).ready(function () {
                                     <h4 class="card-title font-weight-bold">${data.title}</h4>
                                     <h5 class="card-title">${data.episodes} Episodes</h5>
                                     <h5 class="card-title font-italic">Rate: ${data.score}</h5>
-                                    <button class="btn btn-info" id="detail-button"
+                                   <button class="btn btn-info" id="detail-button"
                                     data-toggle="modal" data-target="#animeModal"
                                     data-id="${data.mal_id}">Selengkapnya</button>
                                 </div>
@@ -29,13 +29,16 @@ $(document).ready(function () {
                 });
                 $('#search').val('');
             })
+            .catch(error => {
+                console.error(`Error: ${error}`)
+            })
     }
 
-    $('#search-button').click(() => {
+    $('#product-search-button').click(() => {
         searchAnime();
     });
 
-    $('#search').keyup((e) => {
+    $('#product-search').keyup((e) => {
         if (e.keyCode === 13) {
             searchAnime()
         }
@@ -66,8 +69,15 @@ $(document).ready(function () {
                             </ul>
                         </div>
                     </div>
+                    <input type="hidden" name="title" value="${response.title}">
+                    <input type="hidden" name="genre" value="${response.genres.map(data => {
+                        return ' ' + data.name;
+                    })}">
                 `);
-            });
+            })
+            .catch(error => {
+                console.error(`Error: ${error}`)
+            })
     })
 
     $('#animeModal-close').click(function() {

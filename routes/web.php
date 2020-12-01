@@ -39,3 +39,34 @@ $router->get('/contact', [
     'as' => 'contact',
     'uses' => 'Contact\ContactController@index',
 ]);
+
+$router->get('/anime', [
+    'as' => 'anime.index',
+    'uses' => 'Anime\AnimeController@index',
+]);
+
+$router->get('/anime/create', [
+    'as' => 'anime.create',
+    'uses' => 'Anime\AnimeController@create'
+]);
+
+$router->post('/anime', [
+   'as' => 'anime.store',
+   'uses' => 'Anime\AnimeController@store'
+]);
+
+$router->get('/anime/{anime}/edit', [
+    'as' => 'anime.edit',
+    'uses' => 'Anime\AnimeController@edit'
+]);
+
+$router->put('/anime/{anime}', [
+    'as' => 'anime.update',
+    'uses' => 'Anime\AnimeController@update'
+]);
+
+$router->delete('/anime/{anime}', [
+    'as' => 'anime.destroy',
+    'uses' => 'Anime\AnimeController@destroy'
+]);
+
